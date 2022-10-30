@@ -4,16 +4,16 @@ var main = function () {
   const clubListElement = document.querySelector('#clubList');
 
   const onButtonSearchClicked = function () {
-    let dataSource = new DataSource(renderResult, fallbackResult);
+    const dataSource = new DataSource(renderResult, fallbackResult);
     dataSource.searchClub(searchElement.value);
   };
 
   const renderResult = function (results) {
     clubListElement.innerHTML = '';
     results.forEach(function (club) {
-      let name = club.name;
-      let fanArt = club.fanArt;
-      let description = club.description;
+      const name = club.name;
+      const fanArt = club.fanArt;
+      const description = club.description;
 
       const clubElement = document.createElement('div');
       clubElement.setAttribute('class', 'club');
